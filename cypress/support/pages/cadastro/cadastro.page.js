@@ -26,90 +26,106 @@ const elements = {
 
 
 //**********Ações**********
-class CadastrarClientePage { 
+export default class CadastrarClientePage { 
 
     clicarCadastrar(){
         cy.get(elements.cadastrarButton).click();
+        return this;
     }
 
     preencherNome(nomeCompleto){
-        cy.get(elements.nomeField).type(nomeCompleto)
+        cy.get(elements.nomeField).type(nomeCompleto);
+        return this;
     }
 
     preencherCpf(cpf){
-        cy.get(elements.cpfField).type(cpf)
+        cy.get(elements.cpfField).type(cpf);
+        return this;
     }
 
     clicarGenero(){
         cy.get(elements.generoField).click();
+        return this;
     }
     clicarGeneroCombo(){
         cy.get(elements.generoComboBox).click();
+        return this;
     }
 
     preencherDataNascimento(dataNascimento){
         cy.get(elements.dataNascimentoField).type(dataNascimento);
+        return this;
     }
 
     preencherTelefone(telefone){
         cy.get(elements.telefoneField).type(telefone);
+        return this;
     }
 
     preencherEmail(email){
         cy.get(elements.emailField).type(email);
+        return this;
     }
 
     preencherSenha(senha){
         cy.get(elements.senhaField).type(senha);
+        return this;
     }
 
     preencherConfirmaSenha(senha){
         cy.get(elements.confirmaSenhaField).type(senha);
+        return this;
     }
 
     clicarPesquisa(){
         cy.get(elements.pesquisaField).click();
+        return this;
     }
 
     clicarPesquisaCombo(){
         cy.get(elements.pesquisaComboBox).click();
+        return this;
     }
 
     clicarContinuar(){
         cy.get(elements.continueButton).click();
+        return this;
     }
 
     preencherCep(cep){
         cy.get(elements.cepEnderecoField).type(cep);
+        return this;
     }
 
     preencherIdentificacao(identificacaoEndereco){
         cy.get(elements.identificacaoEnderecoField).type(identificacaoEndereco);
+        return this;
     }
 
     preencherNumero(numeroEndereco){
-        cy.get(elements.numeroEnderecoField).type(numeroEndereco)
+        cy.get(elements.numeroEnderecoField).type(numeroEndereco);
+        return this;
     }
 
     preencherComplemento(complemento){
-        cy.get(elements.complementoEnderecoField).type(complemento)
+        cy.get(elements.complementoEnderecoField).type(complemento);
+        return this;
     }
 
     preencherPontoReferencia(referenciaEndereco){
-        cy.get(elements.referenciaEnderecoField).type(referenciaEndereco)
+        cy.get(elements.referenciaEnderecoField).type(referenciaEndereco);
+        return this;
     }
 
     clicarConcluirCadastro(){
         cy.get(elements.concluirCadastroButton).click();
+        return this;
     }
 
 
 //**********Validações**********
     validarTextoEndereco(texto){
         cy.get(elements.adicionarEnderecoText).contains(texto)
+        return this;
     }
-
-
 }
-
-export default new CadastrarClientePage();

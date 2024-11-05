@@ -1,6 +1,6 @@
-import cadastroPage from './cadastro.page'
-import homePage from './home.page'
+import CadastroPage from './cadastro/cadastro.page'
+import HomePage from './home/home.page.js'
 
-export { cadastroPage,
-    homePage 
+export { CadastroPage,
+    HomePage 
  }

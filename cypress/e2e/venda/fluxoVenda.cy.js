@@ -1,8 +1,4 @@
-import {
-    homePage,
-  } from '../support/pages/index';
-  
-  
+
   beforeEach(() => {
     cy.visit("");
   });

@@ -1,3 +1,5 @@
+import CadastrarClientePage from '../cadastro/cadastro.page.js'
+
 //**********Mapeamento de elementos**********
 const elements = {
 
@@ -7,13 +9,10 @@ const elements = {
 
 
 //**********Ações**********
-class homePage { 
+export default class HomePage { 
 
     clicarCadastrar(){
         cy.get(elements.cadastrarButton).click();
+        return new CadastrarClientePage();
     }
-
-
 }
-
-export default new homePage();

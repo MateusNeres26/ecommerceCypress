@@ -1,7 +1,7 @@
-import ClienteBuilder from '../support/pages/builders/ClienteBuilder';
+import ClienteBuilder from '../../support/pages/builders/ClienteBuilder';
 
 beforeEach(() => {
-  cy.visit("");
+  cy.visit('');
 });
 
 describe('Cadastro de cliente', () => {
